@@ -32,7 +32,12 @@
         </li>
       </ol>
     </nav>
-    <main></main>
+    <main><form method="get">
+      <label for="search">Titel:</label>
+      <input type="text" id="search" name="search" placeholder="Geben Sie den Titel ein" required pattern="^[A-Z][a-zA-Z]{3,19}$" />
+      <button type="submit">Suchen!</button>
+    </form>
+    </main>
     <aside></aside>
     <footer></footer>
   </body>

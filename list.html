@@ -30,9 +30,13 @@
             Kategorie C
           </a>
         </li>
+        <li>
+        <a href="form.html">form.html</a>
+        </li>
       </ol>
     </nav>
-    <main><form method="get">
+    <main>
+      <form method="GET" action="https://labs.inf.fhdortmund.de/tutorialService/testTutorialSearch.php">
       <label for="search">Titel:</label>
       <input type="text" id="search" name="search" placeholder="Geben Sie den Titel ein" required pattern="^[A-Z][a-zA-Z]{3,19}$" />
       <button type="submit">Suchen!</button>

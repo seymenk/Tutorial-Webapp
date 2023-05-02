@@ -4,45 +4,98 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Liste</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
   </head>
   <body>
     <header>
-      <img src="Seymen_A_couple_on_the_Black_Sea_where_from_the_sky_appears_a_r_1dcb221f-1832-4b37-9180-6cc198ad4219.png" alt="Logo für die Web-Anwendung" width="50" height="auto" />
-      <h1>Titel der Web-Anwendung</h1>
+      <img
+        src="assets/img/bild1.png"
+        alt="Logo für die Web-Anwendung"
+        width="50"
+        height="auto"
+      />
+      <h1>Tutorial-Übersicht</h1>
     </header>
     <nav>
+      <a href="list.html">list.html</a>
+      <a href="form.html">form.html</a>
+      <a href="tutorial.html">tutorial.html</a>
+      <a href="tutorials.html">tutorials.html</a>
+    </nav>
+    <main>
       <ol>
         <li>
           <a href="tutorials.html">
-            <img src="Seymen_A_couple_on_the_Black_Sea_where_from_the_sky_appears_a_r_1dcb221f-1832-4b37-9180-6cc198ad4219.png" alt="Logo für Kategorie A" width="100" height="auto"/>
-            Kategorie A
+            <img
+              src="assets/img/bild1.png"
+              alt="Logo für Kategorie A"
+              width="100"
+              height="auto"
+            />
+            <p>Kategorie A</p>
           </a>
         </li>
         <li>
           <a href="tutorials.html">
-            <img src="Seymen_A_couple_on_the_Black_Sea_where_from_the_sky_appears_a_r_1dcb221f-1832-4b37-9180-6cc198ad4219.png" alt="Logo für Kategorie B" width="100" height="auto"/>
-            Kategorie B
+            <img
+              src="assets/img/bild1.png"
+              alt="Logo für Kategorie B"
+              width="100"
+              height="auto"
+            />
+            <p>Kategorie B</p>
           </a>
         </li>
         <li>
           <a href="tutorials.html">
-            <img src="Seymen_A_couple_on_the_Black_Sea_where_from_the_sky_appears_a_r_1dcb221f-1832-4b37-9180-6cc198ad4219.png" alt="Logo für Kategorie C" width="100" height="auto"/>
-            Kategorie C
+            <img
+              src="assets/img/bild1.png"
+              alt="Logo für Kategorie C"
+              width="100"
+              height="auto"
+            />
+            <p>Kategorie C</p>
           </a>
         </li>
         <li>
-        <a href="form.html">form.html</a>
+          <a href="form.html"
+            ><img
+              src="assets/img/bild1.png"
+              alt="Logo für Kategorie C"
+              width="100"
+              height="auto"
+            />
+            <p>form.html</p>
+          </a>
         </li>
       </ol>
-    </nav>
-    <main>
-      <form method="GET" action="https://labs.inf.fhdortmund.de/tutorialService/testTutorialSearch.php">
-      <label for="search">Titel:</label>
-      <input type="text" id="search" name="search" placeholder="Geben Sie den Titel ein" required pattern="^[A-Z][a-zA-Z]{3,19}$" />
-      <button type="submit">Suchen!</button>
-    </form>
+      <form
+        method="GET"
+        action="https://labs.inf.fhdortmund.de/tutorialService/testTutorialSearch.php"
+      >
+        <label for="search">Titel:</label>
+        <input
+          type="text"
+          id="search"
+          name="search"
+          placeholder="Geben Sie den Titel ein"
+          required
+          pattern="^[A-Z][a-zA-Z]{3,19}$"
+        />
+        <button type="submit">Suchen!</button>
+      </form>
     </main>
-    <aside></aside>
-    <footer></footer>
+    <aside>
+      <h3>Neue Tutorials</h3>
+      <ul>
+        <li>
+          Node.js - Der schnelle Einstieg, 28.Sep.2025 - Dauer: 1Std 5 Min
+        </li>
+        <li>
+          Node.js - Der schnelle Einstieg, 28.Sep.2025 - Dauer: 1Std 5 Min
+        </li>
+      </ul>
+    </aside>
+    <footer><p>&copy; by WebTech Inc.</p></footer>
   </body>
 </html>

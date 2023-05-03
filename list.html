@@ -4,16 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Liste</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/forms.css" />
   </head>
   <body>
     <header>
-      <img
-        src="assets/img/bild1.png"
-        alt="Logo für die Web-Anwendung"
-        width="50"
-        height="auto"
-      />
+      <img src="assets/img/bild1.png" alt="Logo für die Web-Anwendung" />
       <h1>Tutorial-Übersicht</h1>
     </header>
     <nav>
@@ -26,45 +22,25 @@
       <ol>
         <li>
           <a href="tutorials.html">
-            <img
-              src="assets/img/bild1.png"
-              alt="Logo für Kategorie A"
-              width="100"
-              height="auto"
-            />
+            <img src="assets/img/bild1.png" alt="Logo für Kategorie A" />
             <p>Kategorie A</p>
           </a>
         </li>
         <li>
           <a href="tutorials.html">
-            <img
-              src="assets/img/bild1.png"
-              alt="Logo für Kategorie B"
-              width="100"
-              height="auto"
-            />
+            <img src="assets/img/bild1.png" alt="Logo für Kategorie B" />
             <p>Kategorie B</p>
           </a>
         </li>
         <li>
           <a href="tutorials.html">
-            <img
-              src="assets/img/bild1.png"
-              alt="Logo für Kategorie C"
-              width="100"
-              height="auto"
-            />
+            <img src="assets/img/bild1.png" alt="Logo für Kategorie C" />
             <p>Kategorie C</p>
           </a>
         </li>
         <li>
           <a href="form.html"
-            ><img
-              src="assets/img/bild1.png"
-              alt="Logo für Kategorie C"
-              width="100"
-              height="auto"
-            />
+            ><img src="assets/img/bild1.png" alt="Logo für Kategorie C" />
             <p>form.html</p>
           </a>
         </li>
@@ -74,14 +50,16 @@
         action="https://labs.inf.fhdortmund.de/tutorialService/testTutorialSearch.php"
       >
         <label for="search">Titel:</label>
-        <input
-          type="text"
-          id="search"
-          name="search"
-          placeholder="Geben Sie den Titel ein"
-          required
-          pattern="^[A-Z][a-zA-Z]{3,19}$"
-        />
+        <span class="requiredFields"
+          ><input
+            type="text"
+            id="search"
+            name="search"
+            placeholder="Geben Sie den Titel ein"
+            required
+            pattern="^[A-Z][a-zA-Z]{3,19}$"
+          />
+        </span>
         <button type="submit">Suchen!</button>
       </form>
     </main>

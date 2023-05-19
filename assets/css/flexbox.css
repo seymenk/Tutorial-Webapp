@@ -1,0 +1,14 @@
+#container{
+    display: flex;
+    justify-content: space-between;
+}
+
+#listMain{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#infoUndLogoContainer{
+    display: flex;
+    justify-content: space-between;
+}

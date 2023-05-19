@@ -11,13 +11,11 @@ h4 {
   word-spacing: 10px;
 }
 
-/* Aufgabe 2.1 */
 nav,
 aside {
   background-color: #f0f0f0;
 }
 
-/* Aufgabe 2.2 */
 nav a:hover {
   color: #ff0000;
 }
@@ -74,12 +72,6 @@ footer{
 
 section .figureTutorials {
   float: left;
-  margin-right: 20px;
-  margin-bottom: 20px;
-}
-
-section .figureTutorial {
-  float: right;
   margin-right: 20px;
   margin-bottom: 20px;
 }

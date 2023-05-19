@@ -6,6 +6,8 @@
     <title>Liste</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/forms.css" />
+    <link rel="stylesheet" href="assets/css/flexbox.css" />
+    <link rel="stylesheet" href="assets/css/tiles.css" />
   </head>
   <body>
     <header>
@@ -18,62 +20,58 @@
       <a href="tutorial.html">tutorial.html</a>
       <a href="tutorials.html">tutorials.html</a>
     </nav>
-    <main>
-      <ol>
-        <li>
-          <a href="tutorials.html">
+    <div id="container">
+      <main id="listMain">
+        
+        <div class="tiles">
+          <a class="tile" href="tutorials.html">
             <img src="assets/img/bild1.png" alt="Logo für Kategorie A" />
             <p>Kategorie A</p>
           </a>
-        </li>
-        <li>
-          <a href="tutorials.html">
+          <a class="tile" href="tutorials.html">
             <img src="assets/img/bild1.png" alt="Logo für Kategorie B" />
             <p>Kategorie B</p>
           </a>
-        </li>
-        <li>
-          <a href="tutorials.html">
+          <a class="tile" href="tutorials.html">
             <img src="assets/img/bild1.png" alt="Logo für Kategorie C" />
             <p>Kategorie C</p>
           </a>
-        </li>
-        <li>
-          <a href="form.html"
-            ><img src="assets/img/bild1.png" alt="Logo für Kategorie C" />
+          <a class="tile" href="form.html">
+            <img src="assets/img/bild1.png" alt="Logo für Kategorie C" />
             <p>form.html</p>
           </a>
-        </li>
-      </ol>
-      <form
-        method="GET"
-        action="https://labs.inf.fhdortmund.de/tutorialService/testTutorialSearch.php"
-      >
-        <label for="search">Titel:</label>
-        <span class="requiredFields"
-          ><input
-            type="text"
-            id="search"
-            name="search"
-            placeholder="Geben Sie den Titel ein"
-            required
-            pattern="^[A-Z][a-zA-Z]{3,19}$"
-          />
-        </span>
-        <button type="submit">Suchen!</button>
-      </form>
-    </main>
-    <aside>
-      <h3>Neue Tutorials</h3>
-      <ul>
-        <li>
-          Node.js - Der schnelle Einstieg, 28.Sep.2025 - Dauer: 1Std 5 Min
-        </li>
-        <li>
-          Node.js - Der schnelle Einstieg, 28.Sep.2025 - Dauer: 1Std 5 Min
-        </li>
-      </ul>
-    </aside>
+        </div>
+
+        <form
+          method="GET"
+          action="https://labs.inf.fhdortmund.de/tutorialService/testTutorialSearch.php"
+        >
+            <label for="search">Titel:</label>
+            <span class="requiredFields"
+              ><input
+                type="text"
+                id="search"
+                name="search"
+                placeholder="Geben Sie den Titel ein"
+                required
+                pattern="^[A-Z][a-zA-Z]{3,19}$"
+              />
+            </span>
+            <button type="submit">Suchen!</button>
+        </form>
+      </main>
+      <aside>
+        <h3>Neue Tutorials</h3>
+        <ul>
+          <li>
+            Node.js - Der schnelle Einstieg, 28.Sep.2025 - Dauer: 1Std 5 Min
+          </li>
+          <li>
+            Node.js - Der schnelle Einstieg, 28.Sep.2025 - Dauer: 1Std 5 Min
+          </li>
+        </ul>
+      </aside>
+    </div>
     <footer><p>&copy; by WebTech Inc.</p></footer>
   </body>
 </html>

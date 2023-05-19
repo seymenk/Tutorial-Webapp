@@ -6,6 +6,7 @@
     <title>Form</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/forms.css" />
+    <link rel="stylesheet" href="assets/css/grid.css" />
   </head>
   <body>
     <header>
@@ -18,107 +19,109 @@
       <a href="tutorial.html">tutorial.html</a>
       <a href="tutorials.html">tutorials.html</a>
     </nav>
-    <main>
-      <form
-        method="POST"
-        name="language"
-        action="https://labs.inf.fhdortmund.de/tutorialService/testCreateTutorial.php"
-      >
-        <fieldset>
-          <legend>Tutorialinformationen</legend>
-          <label>Titel</label>
-          <span class="requiredFields"
-            ><input
+    <div id="container">
+      <main>
+        <form
+          method="POST"
+          name="language"
+          action="https://labs.inf.fhdortmund.de/tutorialService/testCreateTutorial.php"
+        >
+          <fieldset>
+            <legend>Tutorialinformationen</legend>
+            <label>Titel</label>
+            <span class="requiredFields"
+              ><input
+                type="text"
+                name="name"
+                pattern="^[A-Z][a-zA-Z]{3,19}$"
+                placeholder="Titel"
+                required
+            /></span>
+            <br />
+            <label for="language">Sprache:</label>
+            <select name="language" id="language">
+              <option value="">-</option>
+              <option value="de">Deutsch</option>
+              <option value="en">Englisch</option>
+              <option value="es">Spanisch</option>
+              <option value="fr">Französisch</option>
+            </select>
+            <br />
+            <label for="categories">Kategorie(n):</label>
+            <span class="requiredFields"
+              ><input
+                type="text"
+                id="categories"
+                name="categories"
+                pattern="[^,]+(,[^,]+)*"
+                required
+                placeholder="Kategorien"
+            /></span>
+            <br />
+            <label for="description">Beschreibung:</label>
+            <span class="requiredFields">
+              <textarea
+                id="description"
+                name="description"
+                rows="4"
+                minlength="40"
+                required
+                placeholder="Beschreibung"
+              ></textarea>
+            </span>
+            <br />
+          </fieldset>
+          <fieldset>
+            <legend>Zeitliche Rahmenbedingungen</legend>
+            <label for="duration">Dauer:</label>
+            <span class="requiredFields"
+              ><input
+                type="text"
+                id="duration"
+                name="duration"
+                pattern="^([0-1][0-5]:[0-5][0-9])|(00:2[0-9])|(00:3[0-9])|(00:4[0-9])|(00:5[0-9])$"
+                title="Die Dauer muss zwischen 00:20 und 15:59 liegen."
+                required
+                placeholder="Dauer"
+            /></span>
+            <br />
+            <label for="date">Veröffentlichung:</label>
+            <input type="date" id="date" name="date" placeholder="01.01.2023" />
+            <br />
+          </fieldset>
+          <fieldset>
+            <legend>Tutorial Inhalt</legend>
+            <label for="tutorial-type">Tutorial:</label>
+            <select name="type" id="tutorial-type">
+              <option value="text">Text-Tutorial</option>
+              <option value="video">Video-Tutorial</option>
+            </select>
+            <br />
+            <label for="tutorial-content">Inhalt:</label>
+            <input
               type="text"
-              name="name"
-              pattern="^[A-Z][a-zA-Z]{3,19}$"
-              placeholder="Titel"
+              id="tutorial-content"
+              name="content"
               required
-          /></span>
-          <br />
-          <label for="language">Sprache:</label>
-          <select name="language" id="language">
-            <option value="">-</option>
-            <option value="de">Deutsch</option>
-            <option value="en">Englisch</option>
-            <option value="es">Spanisch</option>
-            <option value="fr">Französisch</option>
-          </select>
-          <br />
-          <label for="categories">Kategorie(n):</label>
-          <span class="requiredFields"
-            ><input
-              type="text"
-              id="categories"
-              name="categories"
-              pattern="[^,]+(,[^,]+)*"
-              required
-              placeholder="Kategorien"
-          /></span>
-          <br />
-          <label for="description">Beschreibung:</label>
-          <span class="requiredFields">
-            <textarea
-              id="description"
-              name="description"
-              rows="4"
-              minlength="40"
-              required
-              placeholder="Beschreibung"
-            ></textarea>
-          </span>
-          <br />
-        </fieldset>
-        <fieldset>
-          <legend>Zeitliche Rahmenbedingungen</legend>
-          <label for="duration">Dauer:</label>
-          <span class="requiredFields"
-            ><input
-              type="text"
-              id="duration"
-              name="duration"
-              pattern="^([0-1][0-5]:[0-5][0-9])|(00:2[0-9])|(00:3[0-9])|(00:4[0-9])|(00:5[0-9])$"
-              title="Die Dauer muss zwischen 00:20 und 15:59 liegen."
-              required
-              placeholder="Dauer"
-          /></span>
-          <br />
-          <label for="date">Veröffentlichung:</label>
-          <input type="date" id="date" name="date" placeholder="01.01.2023" />
-          <br />
-        </fieldset>
-        <fieldset>
-          <legend>Tutorial Inhalt</legend>
-          <label for="tutorial-type">Tutorial:</label>
-          <select name="type" id="tutorial-type">
-            <option value="text">Text-Tutorial</option>
-            <option value="video">Video-Tutorial</option>
-          </select>
-          <br />
-          <label for="tutorial-content">Inhalt:</label>
-          <input
-            type="text"
-            id="tutorial-content"
-            name="content"
-            required
-            placeholder="Inhalt"
-          />
-          <br />
-          <button type="submit">Absenden</button>
-        </fieldset>
-      </form>
-    </main>
-    <aside>
-      <h3>Neue Tutorials</h3>
-      <ul>
-        <li>
-          Node.js - Der schnelle Einstieg, 28.Sep.2025 - Dauer: 1Std 5 Min
-        </li>
-        <li>
-          Node.js - Der schnelle Einstieg, 28.Sep.2025 - Dauer: 1Std 5 Min
-        </li>
-      </ul>
-    </aside>
+              placeholder="Inhalt"
+            />
+            <br />
+            <button type="submit">Absenden</button>
+          </fieldset>
+        </form>
+      </main>
+      <aside>
+        <h3>Neue Tutorials</h3>
+        <ul>
+          <li>
+            Node.js - Der schnelle Einstieg, 28.Sep.2025 - Dauer: 1Std 5 Min
+          </li>
+          <li>
+            Node.js - Der schnelle Einstieg, 28.Sep.2025 - Dauer: 1Std 5 Min
+          </li>
+        </ul>
+      </aside>
+    </div>
     <footer><p>&copy; by WebTech Inc.</p></footer>
   </body>
 </html>

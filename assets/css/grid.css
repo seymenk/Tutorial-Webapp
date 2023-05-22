@@ -3,3 +3,25 @@
   grid-template-columns: auto 500px;
   gap: 20px;
 }
+
+@media screen and (max-width: 768px) {
+  #container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  h1{
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1{
+    /* display: none klappt irgendwie nicht */
+    visibility: hidden;
+  }
+  .nav {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

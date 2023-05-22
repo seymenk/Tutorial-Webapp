@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/forms.css" />
     <link rel="stylesheet" href="assets/css/flexbox.css" />
     <link rel="stylesheet" href="assets/css/tiles.css" />
+    <script src="assets/js/script.js"></script>
   </head>
   <body>
     <header>
@@ -22,7 +23,6 @@
     </nav>
     <div id="container">
       <main id="listMain">
-        
         <div class="tiles">
           <a class="tile" href="tutorials.html">
             <img src="assets/img/bild1.png" alt="Logo für Kategorie A" />
@@ -46,18 +46,18 @@
           method="GET"
           action="https://labs.inf.fhdortmund.de/tutorialService/testTutorialSearch.php"
         >
-            <label for="search">Titel:</label>
-            <span class="requiredFields"
-              ><input
-                type="text"
-                id="search"
-                name="search"
-                placeholder="Geben Sie den Titel ein"
-                required
-                pattern="^[A-Z][a-zA-Z]{3,19}$"
-              />
-            </span>
-            <button type="submit">Suchen!</button>
+          <label for="search">Titel:</label>
+          <span class="requiredFields"
+            ><input
+              type="text"
+              id="search"
+              name="search"
+              placeholder="Geben Sie den Titel ein"
+              required
+              pattern="^[A-Z][a-zA-Z]{3,19}$"
+            />
+          </span>
+          <button type="submit">Suchen!</button>
         </form>
       </main>
       <aside>

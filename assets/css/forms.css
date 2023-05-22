@@ -1,28 +1,32 @@
-form input:invalid, form textarea:invalid, form select:invalid {
+form input:invalid,
+form textarea:invalid,
+form select:invalid {
   border-bottom-color: red;
 }
 
-form input:valid, form textarea:valid, form select:valid {
+form input:valid,
+form textarea:valid,
+form select:valid {
   border-bottom-color: blue;
 }
 
-form .requiredFields::after{
+form .requiredFields::after {
   content: " (Erforderliches Feld)";
 }
 
-form button[type="submit"]{
+form button[type="submit"] {
   border-radius: 20px;
   background-color: lime;
 }
 
-form legend{
-  border-top: 2px solid black; 
+form legend {
+  border-top: 2px solid black;
   border-bottom: 2px solid black;
   background-color: antiquewhite;
   border-radius: 4px;
 }
 
-form fieldset{
+form fieldset {
   margin-top: 1rem;
   border-left: none;
   border-right: none;

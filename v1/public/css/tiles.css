@@ -1,0 +1,23 @@
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.tile img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.tile p {
+  text-align: center;
+}

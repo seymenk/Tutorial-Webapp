@@ -12,8 +12,7 @@ class Kategorie {
 
 class Bild {
   constructor(url, name) {
-    this.url = url;
-    this.name = name;
+    this.url = url + name;
   }
 }
 

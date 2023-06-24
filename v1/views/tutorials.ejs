@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorials</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/grid.css" />
+    <script src="js/burgermenu.js"></script>
+  </head>
+  <body>
+    <%- include('kopfbereich') %>
+    <div id="container">
+      <main>
+        <% tutorials.forEach(function(tutorial){ %>
+        <section>
+          <a href="/tutorial?name=<%= tutorial.name %>"><h2><%= tutorial.name %></h2></a>
+          <figure class="figureTutorials">
+            <a href="/tutorial?name=<%= tutorial.name %>">
+              <img
+                src="<%= tutorial.bild.url %>"
+                alt="<%= tutorial.bild.name %>"
+              />
+            </a>
+            <figcaption>
+              <%= tutorial.name %>
+            </figcaption>
+          </figure>
+          <p><%= tutorial.datum %></p>
+          <p><%= tutorial.dauer %></p>
+          <p><%= tutorial.beschreibung %></p>
+        </section>
+          <% }); %>
+      </main>
+      <%- include('zusatzinformationen') %>
+    </div>
+    <%- include('fussbereich') %>
+  </body>
+</html>

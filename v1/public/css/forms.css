@@ -1,13 +1,13 @@
 form input:invalid,
 form textarea:invalid,
 form select:invalid {
-  border-bottom-color: red;
+  border-bottom-color: red !important;
 }
 
 form input:valid,
 form textarea:valid,
 form select:valid {
-  border-bottom-color: blue;
+  border-bottom-color: blue !important;
 }
 
 form .requiredFields::after {

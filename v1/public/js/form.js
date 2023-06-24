@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     } else if (videoTutorial.checked) {
       var textarea = document.createElement("textarea");
-      textarea.id = "content";
-      textarea.name = "content";
+      textarea.id = "video";
+      textarea.name = "video";
       textarea.required = true;
       textarea.placeholder = "Video Link";
 

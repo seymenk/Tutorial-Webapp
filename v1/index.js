@@ -50,13 +50,11 @@ function getFehlgeschlagenesHTML(suchbegriff) {
             <h1>Tutorial-Übersicht</h1>
           </header>
           <nav>
-            <a href="../v0/list.html">list.html</a>
-            <a href="../v0/form.html">form.html</a>
-            <a href="../v0/tutorial.html">tutorial.html</a>
-            <a href="../v0/tutorials.html">tutorials.html</a>
+          <a href="/">Liste der Kategorien</a>
+          <a href="/form">Formular</a>
           </nav>
           <main>
-          <h2>Tutorials mit<: ${suchbegriff}</h2>
+          <h2>Tutorials mit ${suchbegriff}</h2>
           <p>Keine Tutorials gefunden!</p>
           </main>
           <aside>
@@ -70,9 +68,8 @@ function getFehlgeschlagenesHTML(suchbegriff) {
               </li>
             </ul>
           </aside>
-        </div>
         <footer><p>&copy; by WebTech Inc.</p></footer>
-      </body>
+      </body> 
     </html>`;
 }
 
@@ -96,10 +93,8 @@ function getErfolgreichesHTML(suchbegriff, matchedTutorials) {
             <h1>Tutorial-Übersicht</h1>
           </header>
           <nav>
-          <a href="../v0/list.html">list.html</a>
-          <a href="../v0/form.html">form.html</a>
-          <a href="../v0/tutorial.html">tutorial.html</a>
-          <a href="../v0/tutorials.html">tutorials.html</a>
+          <a href="localhost:8020/">Liste der Kategorien</a>
+          <a href="localhost:8020/form">Formular</a>
           </nav>
           <main>
           <h2>Tutorials mit: ${suchbegriff}</h2>
@@ -116,7 +111,6 @@ function getErfolgreichesHTML(suchbegriff, matchedTutorials) {
               </li>
             </ul>
           </aside>
-        </div>
         <footer><p>&copy; by WebTech Inc.</p></footer>
       </body>
     </html>`;
@@ -125,7 +119,7 @@ function getErfolgreichesHTML(suchbegriff, matchedTutorials) {
 function createTutorialListItems(tutorials) {
   let result = "";
   for (tutorial of tutorials) {
-    result += `<li>${tutorial.name} ${tutorial.datum}</li>`;
+    result += `<li> <a href=""> ${tutorial.name}</a> (${tutorial.datum})</li>`;
   }
   return result;
 }

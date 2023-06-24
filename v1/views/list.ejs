@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liste</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/forms.css" />
+    <link rel="stylesheet" href="css/flexbox.css" />
+    <link rel="stylesheet" href="css/tiles.css" />
+    <!-- <script src="js/script.js"></script> -->
+    <script src="js/burgermenu.js"></script>
+  </head>
+  <body>
+    <%- include('kopfbereich') %>
+    <div id="container">
+      <main id="listMain">
+        <div class="tiles">
+          <% categories.forEach(function(category) { %>
+          <a
+            class="tile"
+            href="/tutorials?category=<%= category.name %>"
+          >
+            <img src="<%= category.bild.url %>" alt="<%= category.bild.name %>" />
+            <p><%= category.name %></p>
+          </a>
+          <% }); %>
+        </div>
+        <form method="GET" action="http://localhost:8844">
+          <label for="search">Titel:</label>
+          <span class="requiredFields"
+            ><input
+              type="text"
+              id="search"
+              name="search"
+              placeholder="Geben Sie den Titel ein"
+              required
+              pattern="^[A-Z][a-zA-Z]{3,19}$"
+            />
+          </span>
+          <button type="submit">Suchen!</button>
+        </form>
+      </main>
+      <%- include('zusatzinformationen') %>
+    </div>
+    <%- include('fussbereich') %>
+  </body>
+</html>

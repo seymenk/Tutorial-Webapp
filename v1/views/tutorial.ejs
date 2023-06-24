@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/flexbox.css" />
+    <script src="js/burgermenu.js"></script>
+  </head>
+  <body>
+    <%- include('kopfbereich') %>
+    <div id="container">
+      <main>
+        <section>
+          <div id="infoUndLogoContainer">
+            <div>
+              <h2><%= tutorial.name  %></h2>
+              <p><%= tutorial.datum  %> - Dauer: <%= getDauerInStundenUndMinuten(tutorial.dauer) %></p>
+            </div>
+            <div>
+              <figure class="figureTutorial">
+                <img src="<%= tutorial.bild.url  %>" alt="<%= tutorial.name  %>" />
+                <figcaption><%= tutorial.name  %></figcaption>
+              </figure>
+            </div>
+          </div>
+          <% if(tutorial.url != "") { %>
+            <a href="<%= tutorial.url %>">Link zum Tutorial</a>
+          <% } else { %>
+            <%- tutorial.embedCode %>
+          <% } %>                
+          <table id="kapitelDesVideos">
+            <thead>
+              <tr>
+                <th>Name des Kapitels</th>
+                <th>Kurzbeschreibung</th>
+                <th>Dauer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for(let kapitel of tutorial.kapitelliste) { %>
+                <tr>
+                  <td> <%= kapitel.name %> </td>
+                  <td> <%= kapitel.beschreibung %> </td>
+                  <td> <%= kapitel.dauer %> </td>
+                </tr>
+              <% } %>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>Gesamtdauer:</td>
+                <td></td>
+                <td><%= getDauerInStundenUndMinuten(tutorial.dauer) %></td>
+              </tr>
+            </tfoot>
+          </table>
+        </section>
+      </main>
+      <%- include('zusatzinformationen') %>
+    </div>
+    <%- include('fussbereich') %>
+  </body>
+</html>

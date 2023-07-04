@@ -17,7 +17,7 @@ class Tutorial {
     this.sprache = sprache;
     this.beschreibung = beschreibung;
     this.dauer = dauer; // HH:MM
-    this.datum = datum;
+    this.datum = datum.getDate() + '.' + (datum.getMonth()+1) + '.' + datum.getFullYear();
     this.url = url;
     this.embedCode = embedCode;
     this.bild = bild;
@@ -70,7 +70,7 @@ let programmierenTutorial1 = new Tutorial(
   "English",
   "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
   "00:18",
-  new Date("2023/02/20"),
+  new Date("2023,02,20"),
   "https://www.google.de/?hl=de",
   "<html>...</html>",
   new Bild("/img/", "swift.png")
@@ -81,7 +81,7 @@ let kochenTutorial1 = new Tutorial(
   "Deutsch",
   "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
   "00:18",
-  new Date("2023/02/20"),
+  new Date("2023,02,20"),
   "",
   "<iframe width='560' height='315' src='https://www.youtube.com/embed/yS6QKQkfw_w' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; Bild-in-Bild' allowfullscreen></iframe>'",
   new Bild("/img/", "bild1.png")

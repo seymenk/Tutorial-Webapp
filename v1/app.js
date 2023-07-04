@@ -7,7 +7,6 @@ app.set("views", "views");
 
 app.use(express.urlencoded({extended:false}));
 
-//statische Inhalte
 app.use(express.static("public"));
 
 app.use(router);
